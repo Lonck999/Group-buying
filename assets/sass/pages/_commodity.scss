@@ -1,0 +1,228 @@
+@media (min-width:992px) {
+    i.icon-sidebar-show{
+         display:none;
+    }
+    i.icon-sidebar-hide{
+        display:none;
+    }
+ }
+.commodity-tag{
+    &Box{
+
+        width: 100%;
+        max-height: 100px;
+        overflow: auto;
+        display: block;
+        padding-block: 4px;
+
+    }
+    &badge{
+
+        display:inline-block;
+        margin-bottom: 3px;
+        label{
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+            text-wrap: nowrap;
+            font-size: 1.4rem;
+        }
+    }
+
+
+}
+
+.icon-sidebar-show,
+.icon-sidebar-hide{
+    &:hover{
+        transform: scale(1.3); // 懸停時的縮放效果
+        cursor: pointer; // 懸停時顯示手形光標
+    }
+}
+.dashboard-Box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    gap: 0.25rem;
+    margin-block:0.25rem;
+    padding: 0.5rem;
+
+    a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+
+        &:hover{
+            text-shadow: 1px 1px 1px #e5e5e5;
+        }
+    }
+    .dashboard-title{
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+        text-wrap: nowrap;
+
+    }
+
+
+}
+
+.product-thumbnail {
+    &Box{
+        display: flex;
+        margin: 1rem auto 0;
+        padding: 0;
+    }
+    &-item{
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        list-style: none;
+        margin: 0 0.2rem;
+        opacity: 0.3;
+
+        cursor: pointer;
+        &.is-visible{
+            opacity: 0.3;
+        }
+        &.is-active{
+            opacity: 1;
+        }
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+  }
+
+  //圖片大小
+    .splide-product{
+
+        width: 38rem;
+        height: 38rem;
+        @media (max-width: 576px) {
+            width: 25rem; // 在小螢幕上的大小
+            height: 25rem;
+        }
+
+    }
+  .splide__slide.product-image{
+    height: auto;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 0.2rem;
+    opacity: 0.5;
+    cursor: pointer;
+    &.is-active{
+        opacity: 1;
+        transition:  all 0.3s ease-in-out;
+    }
+  }
+  .splide__slide.product-image img {
+    width: 100%;
+    height: auto;
+  }
+  .product-thumbnail-item img{
+    object-fit: scale-down;
+  }
+  //右半邊介紹
+  .product-infoBox{
+    display: inline-flex;
+    flex-direction: column;
+
+    padding-inline: 1.5rem;
+    // width: 38rem;
+    height: 38rem;
+    max-height: 38rem;
+
+    //手機版就不限制介紹的高度
+    @media (max-width:576px) {
+        width:100%;
+        max-height: none;
+        height: auto;
+    }
+    .infoBox-title{
+
+        font-size: 2rem;
+        display:block;
+        font-weight: 600;
+        &:hover{
+            text-shadow: 1px 1px 1px #e5e5e5;
+        }
+    }
+    .infoBox-subtitle{
+        color:#8d8d8d;
+
+        margin-block: 1rem;
+    }
+    .pre-price{
+        color:#888888;
+
+        padding: 0;
+        text-decoration: line-through;
+    }
+    .product-image-mobile{
+        margin: 0 auto;
+        @media (min-width:576px) {
+            display: none;
+
+        }
+        @media (max-width:576px) {
+            padding-top: 2rem;
+        }
+    }
+  }
+
+  .btn-price-outline{
+    @include button-variant($background:white,$border:get-color("primary"),$hover-background:rgba(255, 255, 255, 0.607));
+
+  }
+  .btn-price{
+    @include button-variant($background:get-color("primary"),$border:get-color("primary"),$color:white,$hover-color:white);
+  }
+  .btn-green{
+    @include button-variant($background:get-color("primary"),$border:get-color("primary"),$color:white,$hover-color:white);
+
+  }
+  //詳細內容
+  .product-content{
+    margin-top:1rem;
+    padding: 1rem;
+    border-top: 1px solid #e5e5e5;
+    .content-html{
+        max-height: 500px;
+        overflow-y: auto;
+        img{
+            display: inline-block;
+            width: 100%;
+        }
+    }
+  }
+  //排版
+  .commodity-Box{
+    display: flex;
+    flex-direction: row;
+    @media (max-width:576px) {
+         flex-direction: column-reverse;
+    }
+    .commodity-image{
+        @media (max-width:576px) {
+            display: none;
+       }
+    }
+  }
+
+
+
+  .hidden-sm{
+    @media (max-width:576px) {
+        display: none;
+   }
+  }
+
+  .tagbadge-btn{
+    @include button-variant($background:rgb(245, 245, 245),$border:white, $active-border:get-color("primary"));
+
+  }

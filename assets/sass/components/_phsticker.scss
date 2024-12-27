@@ -1,0 +1,56 @@
+$aspect-ratio-4-3: 0.75;
+$aspect-ratio-16-9: 0.5625;
+
+@for $i from 100 through 500 {
+  .object-fit-container-43-#{$i} {
+    width: #{$i}px;
+    height: #{$i * $aspect-ratio-4-3}px; // 4:3 比例
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .object-fit-container-169-#{$i} {
+    width: #{$i}px;
+    height: #{$i * $aspect-ratio-16-9}px; // 16:9 比例
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+@for $i from 22 through 300 {
+    $multiple:  calc($i / 2);
+    $multiple2:  calc($i / 50);
+
+    @if ($multiple % 1 == 0)  and ($i<=50) {
+
+      .object-fit-container-#{$i} {
+        width: #{$i}px;
+        height: #{$i}px;
+
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    @if ($multiple2 % 1 == 0) and ($i>=50){
+      .object-fit-container-#{$i} {
+        width: #{$i}px;
+        height: #{$i}px;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }

@@ -1,0 +1,64 @@
+/*
+COLORS:
+*/
+$colors:(
+    "orange":#FFA843,
+    "blue":#2A8DD5,
+    "red":#E81010,
+    "white":#fff,
+    "black":#000,
+    "gray":rgb(137, 137, 137),
+    "green":#008124,
+    "primary":#008b84,
+    "scrollbar":#046d68
+);
+
+
+// 使用 @each 循環遍歷顏色映射
+@each $name, $val in $colors {
+    .color-#{$name} { // 使用插值生成類名
+        color: $val !important; // 設置文字顏色
+    }
+    .bg-#{$name} { // 使用插值生成類名
+        background-color: $val !important; // 設置文字顏色
+    }
+}
+$price-gray: rgb(137, 137, 137);
+$price-red: #e70000;
+$price-orange: #ffb155;
+$price-blue: #3282fe;
+
+.hidden{
+    display: none !important;
+    &-sm{
+        @media(max-width:576px){
+            display: none !important;
+        }
+    }
+    &-md{
+        @media(max-width:768px){
+            display: none !important;
+        }
+    }
+    &-lg{
+        @media(min-width:992px){
+            display: none !important;
+        }
+    }
+
+}
+
+@function get-color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+
+.transition-show{
+    opacity: 1;       /* 結束時的透明度 */
+    transition: opacity 1s ease; /* 透明度過渡 */
+}
+.transition-hide{
+    opacity: 0;       /* 結束時的透明度 */
+    transition: opacity 1s ease; /* 透明度過渡 */
+}
+

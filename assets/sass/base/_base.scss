@@ -1,0 +1,21 @@
+:root {
+  --border-color: #d9d9d9;
+  --main-white-color: #fff;
+  --bs-body-bg: #fff;
+}
+
+html {
+
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  // font-family: "Roboto", sans-serif;
+  font-family: rubik, sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+}

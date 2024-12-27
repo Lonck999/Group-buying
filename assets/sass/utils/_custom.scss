@@ -1,0 +1,111 @@
+
+
+//價格
+  .price{
+    @include price-style($width:600,$color:$price-red);
+    padding-block: 1rem;
+  }
+  //有刪除線的價格
+  .price-del{
+    @include price-style($color:$price-orange);
+    @extend .text-del;
+    padding-block: 1rem;
+  }
+  .price-normal{
+    @include price-style($color:$price-gray);
+    padding-block: 1rem;
+  }
+
+  //checkbox-橘色
+.item-checkbox  {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .item-checkbox  input {
+    display: none;
+  }
+  .item-checkbox  span.virtual-box {
+    max-width: 26px;
+    max-height: 26px;
+    border: 1px solid var(--border-color);
+    border-radius: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  .item-checkbox  input:checked ~ span.virtual-box {
+    background: url(../img/checkbox.png) no-repeat center center / 100% 100%;
+    border: none;
+  }
+
+  .form-check-input.style-1{
+    border-width: 1px;
+    &:checked{
+        background-color: map-get($colors, "orange");
+        border-color: map-get($colors, "orange");
+    }
+    &:focus {
+        border-color: lighten(map-get($colors, "orange"), 10%);
+        box-shadow: none;
+
+    }
+    &:active{
+        filter: unset;
+    }
+  }
+
+
+  .title-1{
+    font-weight: bold;
+    font-size: 2.5rem ;
+    color: black;
+    @media  (max-width: 576px) {
+        font-size: min(1.6rem, 2.5rem );
+    }
+
+  }
+  .title-2{
+    font-size: 1.6rem ;
+    color: $price-gray;
+  }
+
+.hide-spin{
+    &[type="number"] {
+        -moz-appearance: textfield; /* Firefox */
+    }
+
+    /* 隱藏 Chrome 和 Safari 的上下數字鍵 */
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.login-button{
+  @include button-variant(white,#c2c2c2,$hover-background:#f4f4f4);
+  display: flex;
+  line-height: 1;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+
+  .img-icon{
+    max-width:16px;
+  }
+  i[class*=" bi-"]::before{
+    vertical-align: text-bottom;
+    line-height: unset;
+  }
+
+}
+
+$directions: top, right, bottom, left;
+// 使用 @for 迴圈來生成 padding 的樣式
+@for $i from 10 through 100 {
+    @each $direction in $directions {
+        .padding-#{$direction}-#{$i} {
+            padding-#{$direction}: #{$i}px;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+
+$scrollbar-track-color:#d9d9d9;
+$scrollbar-thumb-color: get-color("scrollbar");
+
+
+//自訂scrollbar
+@mixin scrollbar-custom($name:default,$color: rgb(173, 173, 173),$background:
+rgba(211, 211, 211, 0.48),$width:8px, $height:8px,$radius:25px,$size:5px,$scroll-height:50px){
+    /* 滾動條 */
+    #{$name}::-webkit-scrollbar {
+        height: $width;
+        width:  $height;
+    }
+    /* 滾動條軌道 */
+    #{$name}::-webkit-scrollbar-track {
+        background-color:$background;
+        border-radius: $radius;
+    }
+    /* 滾動條主軸 */
+    #{$name}::-webkit-scrollbar-thumb {
+        background: lighten($color,10);
+        border-radius: $radius;
+        width: $size;
+    }
+    #{$name}::-webkit-scrollbar-thumb:vertical {
+        min-height: $scroll-height; /* 設定滑塊的最小高度 */
+    }
+}
+
+@mixin scrollbar-config($width, $height){
+    height: $width;
+    width:  $height;
+}
+
+/* 滾動條 */
+::-webkit-scrollbar {
+    @include scrollbar-config(6px,6px);
+}
+/* 滾動條軌道 */
+::-webkit-scrollbar-track {
+    background-color: $scrollbar-track-color;
+    border-radius: 25px;
+}
+
+/* 滾動條主軸 */
+::-webkit-scrollbar-thumb {
+    background: lighten($scrollbar-thumb-color,10);
+    border-radius: 25px;
+    width: 5px;
+}
+/* 滾動條滑塊捲動時的樣式-垂直 */
+::-webkit-scrollbar-thumb:vertical {
+    min-height: 50px; /* 設定滑塊的最小高度 */
+}
+
+/* Firefox瀏覽器特定樣式 */
+/* 滾動條 */
+::-moz-scrollbar {
+    @include scrollbar-config(7px,7px);
+}
+
+/* 滾動條軌道 */
+::-moz-scrollbar-track {
+    background-color: $scrollbar-track-color;
+    border-radius: 25px;
+}
+
+/* 滾動條滑塊 */
+::-moz-scrollbar-thumb {
+    background: $scrollbar-thumb-color;
+    border-radius: 25px;
+}
+
+/* 滾動條滑塊捲動時的樣式-垂直 */
+::-moz-scrollbar-thumb:vertical {
+    min-height: 50px; /* 設定滑塊的最小高度 */
+}
+
+
+/* 滾動條滑塊捲動時的樣式-水平  */
+::-webkit-scrollbar:horizontal {
+@include scrollbar-config(9px,9px);
+}
+::-webkit-scrollbar-thumb:horizontal {
+min-width: 9px;
+width: 9px;
+}
+
+::-moz-scrollbar-thumb:horizontal {
+min-width: 9px;
+width: 9px;
+}
+
+::-ms-scrollbar-thumb:horizontal {
+    min-width: 9px;
+    width: 9px;
+}
+
+
+@include scrollbar-custom(".scrollbar-default",$width:5px, $height:5px);

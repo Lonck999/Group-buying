@@ -1,0 +1,9 @@
+@mixin price-style($size:medium,$width:300,$color:inherit){
+  font-family: "Roboto", sans-serif;
+  font-weight: $width;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  font-size: $size;
+  color:$color;
+}

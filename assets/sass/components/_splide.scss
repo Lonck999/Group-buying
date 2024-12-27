@@ -1,0 +1,57 @@
+//輪播圖
+.splide {
+    width: 100%;
+    &-index{
+      height: 25rem;
+      @media (max-width:576px){
+          height: 15rem;
+      }
+    }
+
+
+  }
+
+.splide__track {
+width: 100%;
+height: 100%;
+}
+
+.splide__slide {
+border-radius: 1rem;
+overflow: hidden;
+position: relative;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.splide__slide .all-carousel__item__info {
+position: absolute;
+bottom: 2%;
+left: 2%;
+color: #fff;
+font-weight: 600;
+p{
+    margin:0;
+}
+}
+
+.splide__arrow {
+background: #ffffffa8;
+
+    &--prev{
+        left: 0;
+    }
+    &--next{
+        right: 0;
+    }
+
+
+}
+.splide__pagination__page{
+background: #939393;
+}

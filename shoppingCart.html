@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="assets/img/icon/Icon-36.png" sizes="36x36">
+    <link rel="icon" type="image/png" href="assets/img/icon/Icon-48.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="assets/img/icon/Icon-72.png" sizes="72x72">
+    <link rel="icon" type="image/png" href="assets/img/icon/Icon-96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/img/icon/Icon-144.png" sizes="144x144">
+
+    <!-- 重設CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/sass/vendors/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/aos.css" />
+
+    <!-- 樣式 -->
+    <link rel="stylesheet" href="./assets/sass/vendors/boxicons-2.1.4/css/boxicons.min.css">
+   <link rel="stylesheet" href="./assets/sass/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>購物車清單</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+
+      <header class="header">
+        <div class="object-fit-container-169-300 header--logo">
+          <a href="./index.html">
+            <img src="./assets/img/mainlogo.png" alt="logo" />
+          </a>
+        </div>
+        <div class="header--search">
+          <div class="input-group ">
+            <input class="form-control form-control-lg rounded-pill" type="search" name="search" placeholder="所有商品" />
+
+            <div type="button" class="header--search__btn">
+              <img src="./assets/img/search.png" alt="search" />
+            </div>
+          </div>
+        </div>
+        <!-- 選單只做ul:1層 -->
+        <nav class="header--nav">
+          <div class="header--nav__hover hidden-sm">
+            <a href="./commodity.html"> 商品分類 </a>
+            <div class="header--nav__commodity">
+              <a href="./commodity.html">
+                商品分類一
+              </a>
+              <a href="./commodity.html">
+                商品分類二
+              </a>
+              <a href="./commodity.html">
+                商品分類三
+              </a>
+              <a href="./commodity.html">
+                商品分類四
+              </a>
+              <a href="./commodity.html">
+                商品分類五
+              </a>
+              <a href="./commodity.html">
+                商品分類六
+              </a>
+
+            </div>
+          </div>
+          <div class="header--nav__hover hidden-sm">
+            <a href="./news.html"> 最新消息 </a>
+          </div>
+          <div class="header--nav__hover hidden-sm">
+            <a href="./contact.html"> 聯絡我們 </a>
+          </div>
+          <div class="header--nav__hover header--user">
+            <a href="./member.html">  <img src="./assets/img/user.png" alt="user" /> </a>
+            <div class="header--nav__commodity">
+              <a href="./login.html">
+                會員登入
+              </a>
+              <a href="./register.html">
+                註冊會員
+              </a>
+              <a href="./order.html">
+                訂單查詢
+              </a>
+            </div>
+          </div>
+          <div class="header--nav__hover header--cart">
+            <a href="./order.html">  <img src="./assets/img/cart.png" alt="cart" /> </a>
+          </div>
+        </nav>
+      </header>
+
+        <div class="cart-section" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="500">
+          <div class="cart-header">
+            <p class="all-item--text">全部商品 (<span>1</span>)</p>
+            <div class="d-flex align-items-center  gap-3 p-2">
+              <input type="checkbox" class="form-check-input style-1 fs-1" id="checkAll" all />
+              <span class=" ms-2 ">全選</span>
+              <button class="btn btn-outline-secondary btn-lg del-btn " id="listDelete">刪除</button>
+            </div>
+          </div>
+
+          <!-- 滾軸 50rem~100rem-->
+          <div class="cart-list cart-list-overscroll grid-center " >
+            <!-- 商品1 -->
+            <div class="cart-list-item  ">
+
+              <div class="item-checkBox">
+                <input type="checkbox" class="form-check-input  style-1 fs-1" />
+                <!-- 照片 -->
+                <div class="item-img grid-center">
+                  <img class="rounded" src="./assets/img/carousel.jpg" alt="商品1" />
+                </div>
+              </div>
+
+              <div class="item-Box">
+                <div class="item-infoBox">
+                  <!-- 商品標題 -->
+                  <p class="info-title">全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠</p>
+                  <!-- 副標題 -->
+                  <span class="info-subtitle hidden">副標題副標題副標題副標題副標題副標題副標題副標題副標題副標題</span>
+                </div>
+                <div class="item-priceBox">
+                  <div class="priceBox-price">
+                    <!-- 先前價格 -->
+                    <span class="price-pre  text-del">$1299</span>
+                    <!-- 現在價格 -->
+                    <span class="price-now ">$1,099</span>
+                  </div>
+                  <div class="priceBox-box">
+                    <div class="priceBox-Btnbox ">
+                      <!-- - -->
+                      <div class="box-btn box-left"  data-quantity="minus" ><i class='bx bx-minus'></i></div>
+                      <!-- number -->
+                      <input class="form-control box-input hide-spin" type="number" data-quantity="number" value="1" >
+                      <!-- + -->
+                      <div class="box-btn box-right" data-quantity="plus" ><i class='bx bx-plus'></i></div>
+                    </div>
+                    <!-- 小計 -->
+                    <span class="price-small-sum">$1,998</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-del">
+                <button class="btn btn-outline-danger btn-lg ">刪除</button>
+              </div>
+            </div>
+            <!-- 商品1 -->
+            <div class="cart-list-item  ">
+
+              <div class="item-checkBox">
+                <input type="checkbox" class="form-check-input  style-1 fs-1"/>
+                <!-- 照片 -->
+                <div class="item-img grid-center">
+                  <img class="rounded" src="./assets/img/carousel.jpg" alt="商品1" />
+                </div>
+              </div>
+
+              <div class="item-Box">
+                <div class="item-infoBox">
+                  <!-- 商品標題 -->
+                  <p class="info-title">全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠</p>
+                  <!-- 副標題 -->
+                  <span class="info-subtitle hidden">副標題副標題副標題副標題副標題副標題副標題副標題副標題副標題</span>
+                </div>
+                <div class="item-priceBox">
+                  <div class="priceBox-price">
+                    <!-- 先前價格 -->
+                    <span class="price-pre  text-del">$1299</span>
+                    <!-- 現在價格 -->
+                    <span class="price-now ">$1,099</span>
+                  </div>
+                  <div class="priceBox-box">
+                    <div class="priceBox-Btnbox ">
+                      <!-- - -->
+                      <div class="box-btn box-left"  data-quantity="minus" ><i class='bx bx-minus'></i></div>
+                      <!-- number -->
+                      <input class="form-control box-input hide-spin" type="number" data-quantity="number" value="1" >
+                      <!-- + -->
+                      <div class="box-btn box-right" data-quantity="plus" ><i class='bx bx-plus'></i></div>
+                    </div>
+                    <!-- 小計 -->
+                    <span class="price-small-sum">$1,998</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-del">
+                <button class="btn btn-outline-danger btn-lg ">刪除</button>
+              </div>
+            </div>
+            <!-- 商品1 -->
+            <div class="cart-list-item  ">
+
+              <div class="item-checkBox">
+                <input type="checkbox" class="form-check-input  style-1 fs-1"/>
+                <!-- 照片 -->
+                <div class="item-img grid-center">
+                  <img class="rounded" src="./assets/img/carousel.jpg" alt="商品1" />
+                </div>
+              </div>
+
+              <div class="item-Box">
+                <div class="item-infoBox">
+                  <!-- 商品標題 -->
+                  <p class="info-title">全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠</p>
+                  <!-- 副標題 -->
+                  <span class="info-subtitle hidden">副標題副標題副標題副標題副標題副標題副標題副標題副標題副標題</span>
+                </div>
+                <div class="item-priceBox">
+                  <div class="priceBox-price">
+                    <!-- 先前價格 -->
+                    <span class="price-pre  text-del">$1299</span>
+                    <!-- 現在價格 -->
+                    <span class="price-now ">$1,099</span>
+                  </div>
+                  <div class="priceBox-box">
+                    <div class="priceBox-Btnbox ">
+                      <!-- - -->
+                      <div class="box-btn box-left"  data-quantity="minus" ><i class='bx bx-minus'></i></div>
+                      <!-- number -->
+                      <input class="form-control box-input hide-spin" type="number" data-quantity="number" value="1" >
+                      <!-- + -->
+                      <div class="box-btn box-right" data-quantity="plus" ><i class='bx bx-plus'></i></div>
+                    </div>
+                    <!-- 小計 -->
+                    <span class="price-small-sum">$1,998</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-del">
+                <button class="btn btn-outline-danger btn-lg ">刪除</button>
+              </div>
+            </div>
+            <!-- 商品1 -->
+            <div class="cart-list-item  ">
+
+              <div class="item-checkBox">
+                <input type="checkbox" class="form-check-input  style-1 fs-1"/>
+                <!-- 照片 -->
+                <div class="item-img grid-center">
+                  <img class="rounded" src="./assets/img/carousel.jpg" alt="商品1" />
+                </div>
+              </div>
+
+              <div class="item-Box">
+                <div class="item-infoBox">
+                  <!-- 商品標題 -->
+                  <p class="info-title">全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠</p>
+                  <!-- 副標題 -->
+                  <span class="info-subtitle hidden">副標題副標題副標題副標題副標題副標題副標題副標題副標題副標題</span>
+                </div>
+                <div class="item-priceBox">
+                  <div class="priceBox-price">
+                    <!-- 先前價格 -->
+                    <span class="price-pre  text-del">$1299</span>
+                    <!-- 現在價格 -->
+                    <span class="price-now ">$1,099</span>
+                  </div>
+                  <div class="priceBox-box">
+                    <div class="priceBox-Btnbox ">
+                      <!-- - -->
+                      <div class="box-btn box-left"  data-quantity="minus" ><i class='bx bx-minus'></i></div>
+                      <!-- number -->
+                      <input class="form-control box-input hide-spin" type="number" data-quantity="number" value="1" >
+                      <!-- + -->
+                      <div class="box-btn box-right" data-quantity="plus" ><i class='bx bx-plus'></i></div>
+                    </div>
+                    <!-- 小計 -->
+                    <span class="price-small-sum">$1,998</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-del">
+                <button class="btn btn-outline-danger btn-lg ">刪除</button>
+              </div>
+            </div>
+            <!-- 商品1 -->
+            <div class="cart-list-item  ">
+
+              <div class="item-checkBox">
+                <input type="checkbox" class="form-check-input  style-1 fs-1"/>
+                <!-- 照片 -->
+                <div class="item-img grid-center">
+                  <img class="rounded" src="./assets/img/carousel.jpg" alt="商品1" />
+                </div>
+              </div>
+
+              <div class="item-Box">
+                <div class="item-infoBox">
+                  <!-- 商品標題 -->
+                  <p class="info-title">全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠</p>
+                  <!-- 副標題 -->
+                  <span class="info-subtitle hidden">副標題副標題副標題副標題副標題副標題副標題副標題副標題副標題</span>
+                </div>
+                <div class="item-priceBox">
+                  <div class="priceBox-price">
+                    <!-- 先前價格 -->
+                    <span class="price-pre  text-del">$1299</span>
+                    <!-- 現在價格 -->
+                    <span class="price-now ">$1,099</span>
+                  </div>
+                  <div class="priceBox-box">
+                    <div class="priceBox-Btnbox ">
+                      <!-- - -->
+                      <div class="box-btn box-left"  data-quantity="minus" ><i class='bx bx-minus'></i></div>
+                      <!-- number -->
+                      <input class="form-control box-input hide-spin" type="number" data-quantity="number" value="1" >
+                      <!-- + -->
+                      <div class="box-btn box-right" data-quantity="plus" ><i class='bx bx-plus'></i></div>
+                    </div>
+                    <!-- 小計 -->
+                    <span class="price-small-sum">$1,998</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-del">
+                <button class="btn btn-outline-danger btn-lg ">刪除</button>
+              </div>
+            </div>
+            <!-- 商品1 -->
+            <div class="cart-list-item  ">
+
+              <div class="item-checkBox">
+                <input type="checkbox" class="form-check-input  style-1 fs-1"/>
+                <!-- 照片 -->
+                <div class="item-img grid-center">
+                  <img class="rounded" src="./assets/img/carousel.jpg" alt="商品1" />
+                </div>
+              </div>
+
+              <div class="item-Box">
+                <div class="item-infoBox">
+                  <!-- 商品標題 -->
+                  <p class="info-title">全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠</p>
+                  <!-- 副標題 -->
+                  <span class="info-subtitle hidden">副標題副標題副標題副標題副標題副標題副標題副標題副標題副標題</span>
+                </div>
+                <div class="item-priceBox">
+                  <div class="priceBox-price">
+                    <!-- 先前價格 -->
+                    <span class="price-pre  text-del">$1299</span>
+                    <!-- 現在價格 -->
+                    <span class="price-now ">$1,099</span>
+                  </div>
+                  <div class="priceBox-box">
+                    <div class="priceBox-Btnbox ">
+                      <!-- - -->
+                      <div class="box-btn box-left"  data-quantity="minus" ><i class='bx bx-minus'></i></div>
+                      <!-- number -->
+                      <input class="form-control box-input hide-spin" type="number" data-quantity="number" value="1" >
+                      <!-- + -->
+                      <div class="box-btn box-right" data-quantity="plus" ><i class='bx bx-plus'></i></div>
+                    </div>
+                    <!-- 小計 -->
+                    <span class="price-small-sum">$1,998</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-del">
+                <button class="btn btn-outline-danger btn-lg ">刪除</button>
+              </div>
+            </div>
+            <!-- 商品1 -->
+            <div class="cart-list-item  ">
+
+              <div class="item-checkBox">
+                <input type="checkbox" class="form-check-input  style-1 fs-1"/>
+                <!-- 照片 -->
+                <div class="item-img grid-center">
+                  <img class="rounded" src="./assets/img/carousel.jpg" alt="商品1" />
+                </div>
+              </div>
+
+              <div class="item-Box">
+                <div class="item-infoBox">
+                  <!-- 商品標題 -->
+                  <p class="info-title">全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠全方位維他命C發泡錠10錠</p>
+                  <!-- 副標題 -->
+                  <span class="info-subtitle hidden">副標題副標題副標題副標題副標題副標題副標題副標題副標題副標題</span>
+                </div>
+                <div class="item-priceBox">
+                  <div class="priceBox-price">
+                    <!-- 先前價格 -->
+                    <span class="price-pre  text-del">$1299</span>
+                    <!-- 現在價格 -->
+                    <span class="price-now ">$1,099</span>
+                  </div>
+                  <div class="priceBox-box">
+                    <div class="priceBox-Btnbox ">
+                      <!-- - -->
+                      <div class="box-btn box-left"  data-quantity="minus" ><i class='bx bx-minus'></i></div>
+                      <!-- number -->
+                      <input class="form-control box-input hide-spin" type="number" data-quantity="number" value="1" >
+                      <!-- + -->
+                      <div class="box-btn box-right" data-quantity="plus" ><i class='bx bx-plus'></i></div>
+                    </div>
+                    <!-- 小計 -->
+                    <span class="price-small-sum">$1,998</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-del">
+                <button class="btn btn-outline-danger btn-lg ">刪除</button>
+              </div>
+            </div>
+
+
+
+
+          </div>
+          <div class="cart-footer ">
+            <div class="footer-sum flex-shrink-1">
+              <span class="">合計：  <span class="price-total fs-1">$3,297</span></span>
+              <span class="price-small ms-1 ">共減<span class="mx-1">$400</span></span>
+            </div>
+            <div class="footer-checkout" id="totalShowBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">結帳</div>
+          </div>
+        </div>
+         <!-- footer -->
+
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-3 fw-bold" id="staticBackdropLabel">填寫收件資訊</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form  class="row" action="paidFinish.html">
+
+              <div class="col-6">
+                <label for="colFormLabelSm" class=" col-form-label col-form-label-lg">收件人</label>
+                <div class="col-12">
+                  <input type="text" class="form-control form-control-lg" id="colFormLabelSm" placeholder="收件人">
+                </div>
+              </div>
+
+              <div class="col-6">
+                <label for="colFormLabelSm1" class=" col-form-label col-form-label-lg">收件人電話</label>
+                <div class="col-12">
+                  <input type="text" class="form-control form-control-lg" id="colFormLabelSm1" placeholder="收件人電話">
+                </div>
+              </div>
+
+              <div class="col-6">
+                 <label for="colFormLabelSm2" class=" col-form-label col-form-label-lg">縣市</label>
+                <div class="col-12">
+                  <select class="form-control form-select-lg" type="text" placeholder="" id="colFormLabelSm2" >
+                    <option value="台北市">台北市</option>
+                    <option value="宜蘭縣">宜蘭縣</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-6 ">
+                 <label for="colFormLabelSm3" class=" col-form-label col-form-label-lg">區域</label>
+                <div class="col-12">
+                  <select class="form-control form-select-lg" type="text" placeholder="" id="colFormLabelSm3" >
+                    <option value="中正路">中正路</option>
+                    <option value="博愛路">博愛路</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
+                 <label for="colFormLabelSm4" class=" col-form-label col-form-label-lg">詳細地址</label>
+                 <div class="col-12">
+                  <input type="address" class="form-control form-control-lg" id="colFormLabelSm4" placeholder="文清街3弄25號">
+                </div>
+              </div>
+
+            </form >
+
+
+          </div>
+          <div class="modal-footer">
+            <div class="d-grid col-12">
+              <a type="button" class="btn fs-4 order-state text-white fw-bold" href="paidFinish.html">確定</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/bs.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

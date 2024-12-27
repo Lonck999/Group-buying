@@ -1,0 +1,31 @@
+/* footer */
+.footer {
+    width: 100%;
+    border-top: 1px dashed get-color("primary");
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+
+  .footer--block {
+    list-style: none;
+    display: flex;
+    place-items: center;
+    gap:0.5rem;
+    flex-wrap: wrap;
+    max-width: 20rem;
+    &.row{
+      flex-direction: row;
+
+    }
+    &.column{
+      flex-direction: column;
+    }
+    @media (max-width:576px){
+      max-width: 10rem;
+    }
+  }

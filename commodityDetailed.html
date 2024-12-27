@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="assets/img/icon/Icon-36.png" sizes="36x36">
+    <link rel="icon" type="image/png" href="assets/img/icon/Icon-48.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="assets/img/icon/Icon-72.png" sizes="72x72">
+    <link rel="icon" type="image/png" href="assets/img/icon/Icon-96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/img/icon/Icon-144.png" sizes="144x144">
+    <!-- 輪播 -->
+    <link href="./assets/css/splide.min.css" rel="stylesheet" type="text/css" />
+      <!-- 重設CSS -->
+      <link rel="stylesheet" type="text/css" href="./assets/sass/vendors/reset.css" />
+      <link rel="stylesheet" type="text/css" href="./assets/css/aos.css" />
+
+      <!-- 樣式 -->
+      <link rel="stylesheet" href="./assets/sass/vendors/boxicons-2.1.4/css/boxicons.min.css">
+      <link rel="stylesheet" href="./assets/sass/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>商品詳細頁面</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="header">
+        <div class="object-fit-container-169-300 header--logo">
+          <a href="./index.html">
+            <img src="./assets/img/mainlogo.png" alt="logo" />
+          </a>
+        </div>
+        <div class="header--search">
+          <div class="input-group ">
+            <input class="form-control form-control-lg rounded-pill" type="search" name="search" placeholder="所有商品" />
+
+            <div type="button" class="header--search__btn">
+              <img src="./assets/img/search.png" alt="search" />
+            </div>
+          </div>
+        </div>
+        <!-- 選單只做ul:1層 -->
+        <nav class="header--nav">
+          <div class="header--nav__hover hidden-sm">
+            <a href="./commodity.html"> 商品分類 </a>
+            <div class="header--nav__commodity">
+              <a href="./commodity.html">
+                商品分類一
+              </a>
+              <a href="./commodity.html">
+                商品分類二
+              </a>
+              <a href="./commodity.html">
+                商品分類三
+              </a>
+              <a href="./commodity.html">
+                商品分類四
+              </a>
+              <a href="./commodity.html">
+                商品分類五
+              </a>
+              <a href="./commodity.html">
+                商品分類六
+              </a>
+
+            </div>
+          </div>
+          <div class="header--nav__hover hidden-sm">
+            <a href="./news.html"> 最新消息 </a>
+          </div>
+          <div class="header--nav__hover hidden-sm">
+            <a href="./contact.html"> 聯絡我們 </a>
+          </div>
+          <div class="header--nav__hover header--user">
+            <a href="./member.html">
+              <i class='bx bxs-user'></i>
+            </a>
+            <div class="header--nav__commodity">
+              <a href="./login.html">
+                會員登入
+              </a>
+              <a href="./register.html">
+                註冊會員
+              </a>
+              <a href="./order.html">
+                訂單查詢
+              </a>
+            </div>
+          </div>
+          <div class="header--nav__hover header--cart">
+            <a href="./order.html">  <i class='bx bxs-shopping-bag'></i></a>
+          </div>
+        </nav>
+      </header>
+
+        <div class="mt-4 d-flex" data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-duration="500">
+            <!-- 左側選單 -->
+          <aside class="  sidebar-area sidebar sidebar-left-width  " >
+
+            <div class="p-2" >
+              <!-- .icon-sidebar-hide 手機隱藏 商品分類控制-->
+              <span class="fs-3 fw-bold d-flex align-items-center justify-content-between">商品分類 <i class='bx bx-collapse-horizontal text-primary icon-sidebar-hide '></i></span>
+              <ul class="flex-column sidebar-content sidebar-scrollbar">
+                <li class="sidebar-btn ">
+                  <a href="commodity.html" class="" aria-current="page">
+                    <i class="icon fa  fa-user-circle"></i>
+                    <span class="menu-title">日本必買</span>
+                  </a>
+                </li>
+                <li class="sidebar-btn ">
+                  <a class="collapse-parent " data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                    <i class="icon fa fa-signal"></i>
+                    <span class="menu-title">【保養專區】</span>
+                  </a>
+                  <div class="collapse show" id="home-collapse" >
+                    <ul class="list-unstyled">
+                      <li  class="sidebar-btn--1 no-icon active">
+                        <a href="commodity.html" class="text-decoration-none" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                        <span class="menu-title">眼睛保養</span>
+                      </a>
+                      </li>
+                      <li  class="sidebar-btn--1 no-icon">
+                      <a href="commodity.html" class=" ">
+                        <span class="menu-title">皮膚保養</span>
+                      </a>
+                      </li>
+                      <li class="sidebar-btn--1 no-icon ">
+                        <a href="commodity.html" class="" >
+                          <span class="menu-title">鼻子保養</span>
+                        </a>
+                      </li>
+                      <li class="sidebar-btn--1 no-icon ">
+                        <a href="commodity.html" class="" >
+                          <span class="menu-title">脖子保養</span>
+                        </a>
+                      </li>
+                      <li class="sidebar-btn--1 no-icon ">
+                        <a href="commodity.html" class="" >
+                          <span class="menu-title">操作手冊</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-btn ">
+                  <a class="collapse-parent " data-bs-toggle="collapse" data-bs-target="#home2-collapse" >
+                    <i class="icon fa fa-cog"></i>
+                    <span class="menu-title">【新手必買】</span>
+                  </a>
+                  <div class="collapse " id="home2-collapse" >
+                    <ul class="list-unstyled">
+                      <li  class="sidebar-btn--1 no-icon">
+                        <a href="commodity.html" class="text-decoration-none">
+                        <span class="menu-title">站長推薦</span>
+                      </a>
+                      </li>
+                      <li  class="sidebar-btn--1 no-icon">
+                      <a href="commodity.html" class=" ">
+                        <span class="menu-title">Dcard推薦</span>
+                      </a>
+                      </li>
+                      <li class="sidebar-btn--1 no-icon ">
+                        <a href="commodity.html" class="" >
+                          <span class="menu-title">熱門銷售</span>
+                        </a>
+                      </li>
+                      <li class="sidebar-btn--1 no-icon ">
+                        <a href="commodity.html" class="" >
+                          <span class="menu-title">用過都說好</span>
+                        </a>
+                      </li>
+                      <li class="sidebar-btn--1 no-icon ">
+                        <a href="commodity.html" class="" >
+                          <span class="menu-title">回頭客專區</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-btn ">
+                  <a href="commodity.html" class="" aria-current="page">
+                    <i class="icon fa  fa-user-circle"></i>
+                    <span class="menu-title">平面進口區</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="filter-price-range">
+                <span class="fs-3 fw-bold ">價格範圍</span>
+                <div class="d-flex">
+                  <input type="text" class="form form-control form-control-lg" placeholder="100">
+                  <span class="mx-2">~</span>
+                  <input type="text" class="form form-control form-control-lg" placeholder="500">
+                </div>
+                <div class="d-grid pt-3">
+                  <button class="btn  btn-green fn-16  text-white">搜尋</button>
+                </div>
+              </div>
+
+            </div>
+          </aside>
+
+          <div class="commodity-main sidebar-right-main "   >
+            <!-- .icon-sidebar-show 手機顯示 商品分類控制-->
+            <div class="commodity-main-header ">
+
+              <span class="fs-3 dashboard-Box">
+                <i class='bx bxs-grid ms-1 text-primary icon-sidebar-show'></i>
+                <a href="" class="">全部商品</a>
+                <i class="bi bi-caret-right-fill fs-6"></i>
+                <a href="" class="">女性保健</a>
+                <i class="bi bi-caret-right-fill fs-6"></i>
+                <a href="" class="dashboard-title ">Revelnmonhol護膚水</a>
+              </span>
+              <div class="commodity-Box">
+                <!-- .commodity-image 手機板會隱藏 -->
+                <div class="commodity-image  " >
+                  <!-- 大輪播圖 -->
+                  <section  class="splide splide-product border" aria-label="My Awesome Gallery">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide product-image">
+                          <img src="assets/img/commodity3.jpeg" alt="">
+                        </li>
+                        <li class="splide__slide product-image">
+                          <img src="assets/img/commodity4.jpeg" alt="">
+                        </li>
+                        <li class="splide__slide product-image">
+                          <img src="assets/img/commodity1.jpeg" alt="">
+                        </li>
+
+                      </ul>
+                    </div>
+                  </section>
+                  <!-- 小圖 -->
+                  <ul id="thumbnails" class="product-thumbnailBox">
+                    <li class="product-thumbnail-item border ">
+                      <img src="assets/img/commodity3.jpeg" alt="">
+                    </li>
+                    <li class="product-thumbnail-item border ">
+                      <img src="assets/img/commodity4.jpeg" alt="">
+                    </li>
+                    <li class="product-thumbnail-item border ">
+                      <img src="assets/img/commodity1.jpeg" alt="">
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="product-infoBox">
+                  <h1 class="text-wrap infoBox-title">世界雙金獎｜榮獲全球最佳有機抗老精華液金獎｜極緻逆齡玫瑰雙精萃 (法國絲絨玫瑰時光活膚精華30mL+玫瑰面膜X10)</h1>
+                  <span class=" infoBox-subtitle hidden ">產品有可能引發過敏，請洽醫師配合使用</span>
+
+                  <!-- 手機版顯示圖片的位置 -->
+                  <div class=" product-image-mobile ">
+                    <section id="mobile-image-carousel" class="splide" aria-label="Beautiful Images">
+                      <div class="splide__track">
+                        <ul class="splide__list">
+                          <li class="splide__slide product-thumbnail-item ">
+                            <img src="assets/img/commodity3.jpeg" alt="">
+                          </li>
+                          <li class="splide__slide product-thumbnail-item ">
+                            <img src="assets/img/commodity4.jpeg" alt="">
+                          </li>
+                          <li class="splide__slide product-thumbnail-item ">
+                            <img src="assets/img/commodity1.jpeg" alt="">
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="padding-bottom-60" ></div>
+                  <span class="pre-price  fs-4 ">NT1,200</span>
+                  <span class="price p-0 fs-1">NT1,239</span>
+                    <div class="padding-bottom-30 hidden-sm" ></div>
+                  <div class="mt-auto">
+                    <span class="text-danger buyer-limit ">購買上限：<samp>1</samp></span>
+                    <div class="priceBox-Btnbox px-0 my-2">
+                      <!-- - -->
+                      <div class="box-btn box-left"  data-quantity="minus" ><i class='bx bx-minus'></i></div>
+                      <!-- number -->
+                      <input class="form-control box-input hide-spin" type="number" data-quantity="number" value="1" >
+                      <!-- + -->
+                      <div class="box-btn box-right" data-quantity="plus" ><i class='bx bx-plus'></i></div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="d-inline-flex  gap-1 mt-2">
+                    <button class=" btn col-6 btn-lg btn-price-outline fn-16">加入購物車</button>
+                    <a class="btn  col-6  btn-lg btn-price fn-16" href="shoppingCart.html">立即結帳</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-content">
+                <span class="order-subtitle fs-3 fw-bold ">詳細說明</span>
+                <div class="content-html mt-2 scrollbar-default">
+                    <img src="./assets/img/html1.jpg" alt="">
+                    <img src="./assets/img/html2.jpg" alt="">
+                    <img src="./assets/img/description-img.png" alt="">
+                    <p>
+                      <b>精華液介紹</b>
+                      <p>
+                        精華液是一種高效的護膚產品，通常含有濃縮的活性成分，如維生素、抗氧化劑和保濕因子。它的分子結構較小，能夠深入肌膚，提供深層滋養和修復。精華液能有效改善肌膚質地，減少細紋和暗沉，使肌膚更加明亮、緊緻。適合各種肌膚類型，特別是乾燥、敏感或需要特別護理的肌膚。使用時，只需在清潔後，取適量輕輕按摩至吸收，即可享受它帶來的美肌效果。
+                      </p>
+
+                    </p>
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <!-- 商品區 -->
+            <section class="commodity-main-main mt-3">
+
+
+          </div>
+        </div>
+
+           <!-- footer -->
+           <footer class="footer">
+            <div class="footer--block gap-3">
+                <a href="commodity.html">
+                  <img src="./assets/img/footer-X Logo.png" alt="footer-X Logo" />
+                </a>
+                <a href="commodity.html">
+                  <img src="./assets/img/footer-ig.png" alt="footer-ig" />
+                </a>
+                <a href="commodity.html">
+                  <img src="./assets/img/footer-youtube.png" alt="footer-youtube" />
+                </a>
+                <a href="commodity.html">
+                  <img
+                    src="./assets/img/footer-LinkedIn.png"
+                    alt="footer-LinkedIn"
+                  />
+                </a>
+                <a href="commodity.html">
+                  <img
+                    src="./assets/img/footer-LinkedIn.png"
+                    alt="footer-LinkedIn"
+                  />
+                </a>
+                <a href="commodity.html">
+                  <img
+                    src="./assets/img/footer-LinkedIn.png"
+                    alt="footer-LinkedIn"
+                  />
+                </a>
+                <a href="commodity.html">
+                  <img
+                    src="./assets/img/footer-LinkedIn.png"
+                    alt="footer-LinkedIn"
+                  />
+                </a>
+
+            </div>
+            <div class="footer--block column">
+
+              <a>最新消息</a>
+              <a>品牌故事</a>
+              <a>商品一覽</a>
+              <a>聯絡我們</a>
+            </div>
+            <div class="footer--block column">
+              <a>會員中心</a>
+              <a>購物車</a>
+              <a>隱私權政策</a>
+            </div>
+
+
+          </footer>
+
+    </div>
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+    <script src="assets/js/bs.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script  src="assets/js/utils.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+  </body>
+</html>

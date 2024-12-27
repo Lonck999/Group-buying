@@ -1,0 +1,92 @@
+
+
+
+//商品區
+.main--commodity {
+     @include padding-y(1rem);
+  }
+
+  .main--commodity__menu {
+    padding-top: 1rem;
+    width: 100%;
+    min-height:400px;
+    overflow: auto;
+    display: block;
+
+    @media (max-width:576px){
+        display: grid;
+        grid-template-columns: repeat(2, min(50%, 265px));
+        place-content: center space-between;
+    }
+  }
+
+  .main--commodity__item {
+    margin-bottom: 2rem;
+    display: inline-block;
+    max-width: 200px;
+    margin-inline: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #000;
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+    img{
+        width: 200px;
+        border-radius: 3px;
+        object-fit: cover;
+
+    }
+    p{
+        margin:0;
+    }
+    &:hover{
+        box-shadow: 1px 0px 4px 1px #e5e5e5ba;
+        transition: all 0.5s ease-in-out;
+        transform: translate(0px, -5px);
+        border: 1px solid get-color("primary");
+        border-radius: 5px;
+    }
+    @media (max-width:576px){
+        margin-inline: 0rem;
+    }
+    transition: all 0.3s ease-in-out;
+  }
+
+//載入更多
+.more-item-link {
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.2rem 1.75rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    border: 1px solid get-color("primary");
+    transition: all 0.5s ease-in-out;
+    &:hover{
+        text-shadow: 1px 1px 1px #e5e5e5;
+
+    }
+}
+
+//熱門專區
+.hot-area{
+    padding: 0.2rem 2.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color:get-color("primary");
+    border-bottom: 3px solid get-color("primary");
+    // animation: bounce 0.5s ease-in-out 2;
+}
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

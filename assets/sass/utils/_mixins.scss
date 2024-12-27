@@ -1,0 +1,46 @@
+@mixin padding-x($value) {
+    padding-left: $value;
+    padding-right: $value;
+  }
+@mixin padding-y($value) {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  @mixin config-x($name,$value){
+    #{$name}-left: $value;
+    #{$name}-right: $value;
+  }
+  @mixin config-y($name,$value){
+    #{$name}-top: $value;
+    #{$name}-bottom: $value;
+  }
+  @mixin config-tl($name,$value){
+    #{$name}-top: $value;
+    #{$name}-left: $value;
+  }
+  @mixin config-tr($name,$value){
+    #{$name}-top: $value;
+    #{$name}-right: $value;
+  }
+  @mixin config-bl($name,$value){
+    #{$name}-bottom: $value;
+    #{$name}-left: $value;
+  }
+  @mixin config-br($name,$value){
+    #{$name}-bottom: $value;
+    #{$name}-right: $value;
+  }
+  @mixin config-t($name,$value){
+    #{$name}-top: $value;
+  }
+  @mixin config-b($name,$value){
+    #{$name}-bottom: $value;
+  }
+  @mixin config-r($name,$value){
+    #{$name}-right: $value;
+  }
+  @mixin config-l($name,$value){
+    #{$name}-left: $value;
+  }
+

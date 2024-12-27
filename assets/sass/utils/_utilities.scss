@@ -1,0 +1,128 @@
+
+
+
+@for $i from 25 through 100 {
+    $multiple: calc($i / 25);
+    @if $multiple % 1 == 0 {
+        .vh-#{$i}{
+            height: ($i)*1vh;
+        }
+        .vw-#{$i}{
+            height: ($i)*1vh;
+        }
+    }
+
+  }
+
+@for $i from 1 through 5 {
+    .letter-space-#{($i)} {
+      letter-spacing: ($i)*1px;
+    }
+  }
+  //字體大小
+  @for $i from 0 through 36 {
+    .fn-#{($i*2)+10} {
+      font-size: (($i*2)+10)*1px;
+    }
+  }
+  @for $i from 1 through 10 {
+    .fn-#{$i}em {
+      font-size: $i*1em;
+    }
+  }
+
+@for $i from 6 through 30{
+    .ms-#{$i}{
+        margin-left: ($i)*0.25rem !important;
+    }
+}
+
+//圓角
+@for $i from 1 through 5 {
+  .radius-#{$i * 10} {
+    border-radius: #{$i * 10}px;
+  }
+}
+//flex-basic 基本寬度
+@for $i from 10 through 100 {
+  .fl-basic-#{$i}{
+    @if $i % 10 == 0 {
+      flex-basis: ($i)*1%;
+    }
+  }
+}
+
+@mixin z-index($value) {
+  .z#{$value}, [z#{$value}] {
+    z-index: $value !important;
+  }
+}
+
+/*z-index */
+@for $i from 2 through 6 {
+  $exponent: pow(10, $i) - 1;
+  @include z-index($exponent);
+}
+
+/*textarea 上下拖曳*/
+.resize{
+  &-v,&-w{
+    resize: vertical;
+  }
+  &-h{
+    resize: horizontal;
+  }
+  &-n{
+    resize: none;
+  }
+}
+
+
+.over-nowrap{
+  white-space: nowrap;
+  overflow: hidden;
+}
+.overflow-clip {
+  text-overflow: clip;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
+
+.overflow-string {
+  text-overflow: " [..]";
+}
+
+.text-del{
+  text-decoration: line-through;
+}
+
+
+.grid-center{
+  display: grid;
+  place-items: center;
+}
+.row-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.column-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.column-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

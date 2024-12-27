@@ -1,0 +1,30 @@
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+@import "utils/variables";
+@import "utils/utilities";
+@import "utils/mixins";
+@import "utils/custom_mixins";
+@import "base/base"; //base基礎設定
+@import "base/container"; //排版共同樣式
+@import "layout/header";  //header設定
+@import "layout/footer"; //footer設定
+@import "layout/sidebar"; //sidbar設定
+@import "components/scrollbar"; //動畫設定
+@import "components/animation"; //動畫設定
+@import "components/phsticker"; //icon
+@import "components/pagetool"; //page頁面
+@import "components/splide"; //輪播圖設定
+
+@import "utils/custom"; //頁面共同樣式
+@import "pages/index";
+@import "pages/news";
+@import "pages/shoppingCart";
+@import "pages/order";
+@import "pages/orderDetail";
+@import "pages/commodity";
+@import "pages/contact";
+
+
+
